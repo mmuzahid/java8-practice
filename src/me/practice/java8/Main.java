@@ -2,6 +2,7 @@ package me.practice.java8;
 
 import me.practice.java8.forEach.ForEachExample;
 import me.practice.java8.interfaceDefaultMethod.InterfaceDefaultMethodExample;
+import me.practice.java8.interfaceStaticMethod.InterfaceStaticMethodExample;
 
 public class Main {
 
@@ -10,6 +11,7 @@ public class Main {
 		
 		ForEachExample.showAllExample();
 		InterfaceDefaultMethodExample.showAllExample();
+		InterfaceStaticMethodExample.showAllExample();
 	}
 
 }
