@@ -1,6 +1,7 @@
 package me.practice.java8;
 
 import me.practice.java8.forEach.ForEachExample;
+import me.practice.java8.interfaceDefaultMethod.InterfaceDefaultMethodExample;
 
 public class Main {
 
@@ -8,6 +9,7 @@ public class Main {
 		System.out.println("Typical 'Hello World'");
 		
 		ForEachExample.showAllExample();
+		InterfaceDefaultMethodExample.showAllExample();
 	}
 
 }
