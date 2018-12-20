@@ -4,6 +4,7 @@ import me.practice.java8.forEach.ForEachExample;
 import me.practice.java8.functionalInterface.FunctionalInterfaceExample;
 import me.practice.java8.interfaceDefaultMethod.InterfaceDefaultMethodExample;
 import me.practice.java8.interfaceStaticMethod.InterfaceStaticMethodExample;
+import me.practice.java8.lambdaexpresion.LambdaExpressioinExample;
 
 public class Main {
 
@@ -14,6 +15,7 @@ public class Main {
 		InterfaceDefaultMethodExample.showAllExample();
 		InterfaceStaticMethodExample.showAllExample();
 		FunctionalInterfaceExample.showAllExample();
+		LambdaExpressioinExample.showAllExample();
 	}
 
 }
