@@ -5,6 +5,7 @@ import me.practice.java8.functionalInterface.FunctionalInterfaceExample;
 import me.practice.java8.interfaceDefaultMethod.InterfaceDefaultMethodExample;
 import me.practice.java8.interfaceStaticMethod.InterfaceStaticMethodExample;
 import me.practice.java8.lambdaexpresion.LambdaExpressioinExample;
+import me.practice.java8.stream.StreamExample;
 
 public class Main {
 
@@ -16,6 +17,7 @@ public class Main {
 		InterfaceStaticMethodExample.showAllExample();
 		FunctionalInterfaceExample.showAllExample();
 		LambdaExpressioinExample.showAllExample();
+		StreamExample.showAllExample();
 	}
 
 }
