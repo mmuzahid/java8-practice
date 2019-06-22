@@ -9,7 +9,16 @@ public class StreamExample {
 
 	public static void showAllExample() {
 		System.out.println("\nStart StreamExample\n");
+		System.out.println("\n--------------\n");
 		showListStreamExample();
+		System.out.println("\n--------------\n");
+		showMapStreamExample();
+		System.out.println("\n--------------\n");
+		showFilterStreamExample();
+		System.out.println("\n--------------\n");
+		showReduceStreamExample();
+		System.out.println("\n--------------\n");
+		showBuildInStreamExample();
 		System.out.println("\nEnd StreamExample\n");
 
 	}
@@ -32,9 +41,54 @@ public class StreamExample {
 		try {
 			strStream.count();// will throw exception because 'strStream' already operated
 		} catch (IllegalStateException ex) {
-			System.out.println(ex);
+			System.out.println("Example of IllegalStateException - " + ex);
 		}
-
+		
 	}
 
+	private static void showMapStreamExample() {
+		int[] numbers = new int[] {1,2,3,4};
+		System.out.println("numbers: " + Arrays.toString(numbers));
+				
+		// Map - Same number of element but changed Item content
+		int[] numbersMultuplyByTwo = Arrays.stream(numbers).map(i -> i * 2).toArray();
+		System.out.println("Map - multiply by two numbers: " + Arrays.toString(numbersMultuplyByTwo));
+				
+	}
+
+	private static void showFilterStreamExample() {
+		int[] numbers = new int[] {1,2,3,4};
+		System.out.println("numbers: " + Arrays.toString(numbers));
+
+		// Filter - Reduce number of content but unchanged Item content
+		int[] filteredNumbers = Arrays.stream(numbers).filter(i -> i > 2).toArray();
+		System.out.println("Filter - filtered greater than two numbers: " + Arrays.toString(filteredNumbers));
+				
+	}
+
+	private static void showReduceStreamExample() {
+		int[] numbers = new int[] {1,2,3,4};
+		System.out.println("numbers: " + Arrays.toString(numbers));
+
+		// Reduce - Aggregate to a Single Value
+		int reducedByMultiply = Arrays.stream(numbers).reduce(1, (i, j) -> i * j);
+		System.out.println("Reduce - reduced by multiply all elements: " + reducedByMultiply);
+	}
+	
+	private static void showBuildInStreamExample() {
+		int[] numbers = new int[] {1,2,3,4};
+		System.out.println("numbers: " + Arrays.toString(numbers));
+
+		// Build-In Sum
+		int total = Arrays.stream(numbers).sum();
+		System.out.println("build-in sum: " + total);
+		
+		System.out.println("build-in avg: " + Arrays.stream(numbers).average().getAsDouble());
+		
+	}
+
+	
+	public static void main(String ... args) {
+		showAllExample();
+	}
 }
